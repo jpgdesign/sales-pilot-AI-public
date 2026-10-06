@@ -1,4 +1,8 @@
-# Public product documentation only. Keep an explicit file allowlist.
+# Public documentation and standalone showcase only. Keep an explicit allowlist.
 /*
 !/README.md
 !/.gitignore
+!/index.html
+!/styles.css
+!/showcase.js
+!/showcase.test.mjs

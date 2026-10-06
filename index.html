@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SalesPilot AI 全通路銷售作戰平台：公開產品介紹與獨立互動展示。">
+  <meta name="referrer" content="no-referrer">
+  <title>SalesPilot AI · 公開展示</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="showcase.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="topbar wrap">
+    <a class="brand" href="#main"><span class="brand-mark" aria-hidden="true">S</span>SalesPilot <span class="brand-ai">AI</span></a>
+    <nav aria-label="主要導覽">
+      <a href="#explore">互動展示</a>
+      <a href="#features">平台功能</a>
+      <a class="button button-small" href="https://github.com/jpgdesign/sales-pilot-AI-public" target="_blank" rel="noopener noreferrer">GitHub 公開版 ↗</a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">SALESPILOT AI / PUBLIC SHOWCASE</p>
+        <h1 id="hero-title">每次接觸，<br>都有服務的延續。</h1>
+        <p class="hero-description">從需求問卷到多通路銷售，從客戶理解到新人訓練。<br class="desktop-break">在同一個工作空間，連接銷售與服務的每一步。</p>
+        <div class="hero-actions">
+          <a class="button" href="#explore">體驗展示互動 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://salespilot.munolithsai.com/" target="_blank" rel="noopener noreferrer">前往正式平台 ↗</a>
+        </div>
+        <p class="hero-note">展示不需登入；正式平台需授權帳號。</p>
+      </div>
+      <aside class="scope-card" aria-label="展示範圍">
+        <span class="badge">全通路銷售與服務</span>
+        <h2>理解需求，<br>接續每一次服務。</h2>
+        <ul class="scope-list">
+          <li><span aria-hidden="true">01</span> 需求接觸與商品推薦</li>
+          <li><span aria-hidden="true">02</span> 客戶經營與服務交接</li>
+          <li><span aria-hidden="true">03</span> 人機協作與新人訓練</li>
+        </ul>
+        <p>連接電話、訊息、郵件與現場，讓團隊掌握服務脈絡。</p>
+      </aside>
+    </section>
+
+    <section id="explore" class="section-block" aria-labelledby="explore-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / EXPLORE</p><h2 id="explore-title">試著挑選這次的展示商品</h2></div>
+        <span class="subtle-tag">只在你的瀏覽器操作</span>
+      </div>
+      <p class="section-description">切換產業、勾選卡片，就能看到下方摘要變化。互動區使用虛構示範資料，不會傳送或建立銷售任務。</p>
+      <div class="demo-panel">
+        <div class="demo-toolbar">
+          <div class="field"><label for="industry">展示產業</label><select id="industry" disabled><option>正在準備展示</option></select></div>
+          <button id="clear-selection" class="button secondary" type="button" disabled>清除選取</button>
+        </div>
+        <fieldset class="product-fieldset"><legend>勾選示範商品</legend><div id="products" class="product-grid"></div></fieldset>
+        <div class="selection-summary" role="status" aria-live="polite" aria-atomic="true"><span class="summary-label">選取摘要</span><p id="selection-summary">請開啟 JavaScript 以操作展示。</p></div>
+      </div>
+    </section>
+
+    <section id="features" class="section-block" aria-labelledby="features-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / CAPABILITIES</p><h2 id="features-title">找到你關心的使用情境</h2></div><a class="text-link" href="https://github.com/jpgdesign/sales-pilot-AI-public#readme" target="_blank" rel="noopener noreferrer">完整產品說明 ↗</a></div>
+      <p class="section-description">以下介紹正式平台的功能範圍；此展示頁只提供分類與搜尋，不執行這些功能。</p>
+      <div class="feature-controls">
+        <div class="field search-field"><label for="feature-search">搜尋功能</label><input id="feature-search" type="search" maxlength="100" autocomplete="off" placeholder="例如：電話、問卷、付款" disabled></div>
+        <div class="field"><label for="feature-category">功能分類</label><select id="feature-category" disabled><option value="all">全部功能</option><option value="channels">銷售與服務</option><option value="customer">客戶經營</option><option value="training">訓練與管理</option></select></div>
+      </div>
+      <p id="feature-count" class="results-count" role="status" aria-live="polite"></p>
+      <div id="feature-cards" class="feature-grid"></div>
+      <p id="empty-results" class="empty-state" hidden>沒有符合的功能。試試其他關鍵字，或將分類切回「全部功能」。</p>
+    </section>
+
+    <section class="section-block" aria-labelledby="models-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / OPEN MODELS</p><h2 id="models-title">開源模型，面向在地服務</h2></div><span class="subtle-tag">應用整合規劃</span></div>
+      <p class="section-description">以正體中文、臺灣用語與可核對的資訊，協助中小企業將商品知識轉為易懂說明、服務建議與培訓素材。以下為開源／開放權重模型選型，尚不代表正式環境已完成接入。</p>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">META</span><h3>Muse Glimmer 30B</h3><p>規劃用於整合服務資訊、文字回覆與待確認的工具請求。</p><p class="model-meta">官方授權：Apache 2.0</p><a class="text-link" href="https://huggingface.co/meta-models/Muse-Glimmer-30B" target="_blank" rel="noopener noreferrer">官方模型頁 ↗</a></article>
+        <article class="feature-card"><span class="feature-number">NVIDIA</span><h3>Nemotron 3.5 Lightning</h3><p>規劃以 30B A3B NVFP4 版本輔助需求分析、文字整理與通後摘要。</p><p class="model-meta">官方授權：OpenMDW 1.1</p><a class="text-link" href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4" target="_blank" rel="noopener noreferrer">官方模型頁 ↗</a></article>
+        <article class="feature-card"><span class="feature-number">GOOGLE</span><h3>Gemma 4 E4B-it</h3><p>規劃用於商品文件與圖片理解，輔助資訊抽取及語意分析。</p><p class="model-meta">官方授權：Apache 2.0</p><a class="text-link" href="https://huggingface.co/google/gemma-4-E4B-it" target="_blank" rel="noopener noreferrer">官方模型頁 ↗</a></article>
+      </div>
+      <p class="hero-note">模型來源與授權核對日期：2026-10-06。由各開發者發布，非 SalesPilot 自有基礎模型；實際使用依官方授權及部署驗收結果。</p>
+    </section>
+    <section class="section-block faq-section" aria-labelledby="faq-title">
+      <div><p class="eyebrow">04 / GOOD TO KNOW</p><h2 id="faq-title">使用與取得</h2><p class="section-description">了解產品與公開內容。</p></div>
+      <div class="faq-list">
+        <details open><summary>這裡的程式可以下載操作嗎？</summary><p>可以。下載公開倉庫後，直接用瀏覽器開啟 index.html，即可操作這個獨立展示頁。它不是完整銷售平台。</p></details>
+        <details><summary>會公開提示詞、客戶資料或核心技術嗎？</summary><p>不會。這裡只有獨立撰寫的展示介面、虛構商品卡片與公開功能文案，不含正式系統原始碼、提示詞、模型設定、資料庫或部署憑證。</p></details>
+        <details><summary>勾選商品後，會真的下單或付款嗎？</summary><p>不會。選取內容只暫存在這一頁的記憶體，重新整理就會清除；沒有送出、儲存、建立訂單或付款的功能。</p></details>
+        <details><summary>如何使用正式平台？</summary><p>請由平台管理者提供授權帳號。電話、訊息、郵件、語音與付款等服務，仍須完成對應的授權、設定及驗收。</p></details>
+      </div>
+    </section>
+    <noscript><p class="no-script">產品介紹仍可閱讀；若要切換產業、勾選商品或搜尋功能，請啟用瀏覽器 JavaScript。</p></noscript>
+  </main>
+  <footer class="wrap footer"><span>SalesPilot AI · 公開產品展示</span><span>虛構示範資料 · 不連接正式後端</span></footer>
+</body>
+</html>
