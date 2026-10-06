@@ -1,0 +1,4 @@
+# Public product documentation only. Keep an explicit file allowlist.
+/*
+!/README.md
+!/.gitignore
